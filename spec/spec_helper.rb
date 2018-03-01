@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "box_muller_rb"
+require "box_muller"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

@@ -1,16 +1,15 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "box_muller_rb/version"
+require "box_muller/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "box_muller_rb"
-  spec.version       = BoxMullerRb::VERSION
+  spec.name          = "box_muller"
+  spec.version       = BoxMuller::VERSION
   spec.authors       = ["kenju-wagatsuma"]
   spec.email         = ["kenju-wagatsuma@cookpad.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = %q{BoxMuller implementation in Ruby}
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
