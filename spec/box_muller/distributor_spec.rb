@@ -17,6 +17,6 @@ RSpec.describe BoxMuller::Distributor do
     result = subject
     expect(result.length).to eq count
     expect(result.sum).to eq total
-    expect(result.unique).not_to eq 1
+    expect(result.uniq).not_to eq 1
   end
 end

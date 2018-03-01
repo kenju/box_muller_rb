@@ -1,8 +1,18 @@
 # BoxMuller
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/box_muller`. To experiment with that code, run `bin/console` for an interactive prompt.
+BoxMuller implementation in Ruby.
 
-TODO: Delete this and the text above, and describe your gem
+<!-- TOC -->
+
+- [BoxMuller](#boxmuller)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [`BoxMuller::Distributor`](#boxmullerdistributor)
+      - [`#distribute`](#distribute)
+  - [Development](#development)
+  - [Contributing](#contributing)
+
+<!-- /TOC -->
 
 ## Installation
 
@@ -22,7 +32,22 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### `BoxMuller::Distributor`
+
+#### `#distribute`
+
+```ruby
+distributor = BoxMuller::Distributor.new
+
+p distributor.distribute(total: 1000, count: 10)
+=> [102, 94, 105, 110, 115, 103, 83, 101, 104, 83]
+
+p distributor.distribute(total: 1000, count: 10, variance: 1.0)
+=> [99, 100, 100, 101, 99, 100, 100, 102, 100, 99]
+
+p distributor.distribute(total: 1000, count: 10, variance: 100.0)
+=> [29, -76, 101, 329, -20, 60, 198, 284, -162, 257]
+```
 
 ## Development
 
